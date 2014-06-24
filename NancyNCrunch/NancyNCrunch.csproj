@@ -51,15 +51,6 @@
     <Reference Include="Microsoft.Owin.Testing">
       <HintPath>..\packages\Microsoft.Owin.Testing.2.1.0\lib\net45\Microsoft.Owin.Testing.dll</HintPath>
     </Reference>
-    <Reference Include="Nancy">
-      <HintPath>..\packages\Nancy.0.23.0\lib\net40\Nancy.dll</HintPath>
-    </Reference>
-    <Reference Include="Nancy.Owin">
-      <HintPath>..\packages\Nancy.Owin.0.23.0\lib\net40\Nancy.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Nancy.Validation.FluentValidation">
-      <HintPath>..\packages\Nancy.Validation.FluentValidation.0.23.0\lib\net40\Nancy.Validation.FluentValidation.dll</HintPath>
-    </Reference>
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
@@ -85,6 +76,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nancy.Owin\Nancy.Owin.csproj">
+      <Project>{d6b2480c-2a52-4d02-9477-d387d7a486e5}</Project>
+      <Name>Nancy.Owin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nancy.Validation.FluentValidation\Nancy.Validation.FluentValidation.csproj">
+      <Project>{01230f2a-d108-480c-b834-8ce0569fd3b3}</Project>
+      <Name>Nancy.Validation.FluentValidation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nancy\Nancy.csproj">
+      <Project>{34576216-0dca-4b0f-a0dc-9075e75a676f}</Project>
+      <Name>Nancy</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
