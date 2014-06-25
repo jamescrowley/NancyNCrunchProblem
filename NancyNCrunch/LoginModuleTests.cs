@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
 using Machine.Specifications;
+using Nancy.Validation.FluentValidation;
 
 namespace NancyNCrunch
 {
     public class LoginModuleTests : WebTests
     {
+        FluentValidationValidator pointlessVariable = null;
+
         class when_sending_valid_request 
         { 
             Because of = () => Response = Server.PostToJsonUrl("/create", new Dictionary<string, string> { { "name", "john" } });
